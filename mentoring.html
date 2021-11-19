@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+    <div id="content">
+      <header>
+        <div class="logo-box">
+          <img src="https://cdn.glitch.me/a6bac801-24eb-4985-a30e-9d35164a69bf%2Fkarina%20pereira.png?v=1635528932616" alt="amon-brollo-logo" height="110">
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="site-plan.html">Site Plan</a></li>
+          <li><a href="mentoring.html">Mentoring</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </header>
+      
+      <main>
+        <img src="https://cdn.glitch.me/a6bac801-24eb-4985-a30e-9d35164a69bf%2Fchange%20light%20bulb%20sign.jpg?v=1636241942244" alt="'change'-light-bulb-sign" height=400px>
+        <h1 class="mentoring-headline">Mentoring</h1>
+        <p class="mentoring-paragraph-1">We all come from different walks of life. I'm a strong believer that everyone has something to learn and to teach, I also believe this is a crucial part of our happiness. Mentors are a wonderful way to progress and develop ourselves, so I offer a mentoring program to help individuals with the desire to become great. I can't tell you for sure weather I'm one the great, but I am willing to work on this together with you.</p>
+        <p class="mentoring-paragraph-2">I'm not a guru of any kind, but if you think I can help if anything you're learning or going through, this program is for you. Some of the things I can help you with include, but are not limited to:</p>
+        <ul class="mentoring-list-1">
+          <li>Programming (Python, CSS and HTML)</li>
+          <li>BYU Idaho Online courses. I took CSE 110 (I won't give you the answer, but I'll help you to get unstuck and teach some useful tricks</li>
+          <li>Language Learning. I know Portuguese, English and Hungarian, and a learned a couple of things about learning languages in general.</li>
+          <li>Productivity. Systems that can help you do more of the things that are meaningful to you.</li>
+        </ul>
+        <img src="https://cdn.glitch.me/a6bac801-24eb-4985-a30e-9d35164a69bf%2Fhandshake%20light%20bulb%20sign.jpg?v=1636241929346" alt="handshake-light-bulb-sign" height=400px>
+        <p class="mentoring-paragraph-3">Before we get started, I need to know some things about you:</p>
+        <form action="/forms.html" method="post">
+          <ul class="mentoring-form">
+            <li>
+              <label for="name">What is your name?</label>
+              <input type="text" id="name" name="user_name">
+            </li>
+            <li>
+              <label for="how">How can I help you?</label>
+              <input type="email" id="mail" name="user_email"></li>
+            <li>
+              <label for="expectations">What are your expectations?</label>
+              <textarea id="msg" name="user_message"></textarea></li>
+            <li>
+              <label for="contact">Enter two methods for me to get in contact with you:</label>
+              <input type="text" id="contact" name="contact_methods"></li>
+            <li class="button">
+              <button type="submit">Submit</button></li>
+            <div id="feedback"></div>
+          </ul>
+        </form>   
+        <script>
+        // get the feedback div element so we can do something with it.
+        const feedbackElement = document.getElementById('feedback');
+        // get the form so we can read what was entered in it.
+        const formElement = document.forms[0];
+        // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+        formElement.addEventListener('submit', function(e) {
+            // stop the form from doing the default action
+            e.preventDefault();
+            // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+            feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+            // make the feedback element visible.
+            feedbackElement.style.display = "block";
+            // add a class to move everything down so our message doesn't cover it.
+            document.body.classList.toggle('moveDown');
+        });
+    </script>
+        <img src="https://cdn.glitch.me/a6bac801-24eb-4985-a30e-9d35164a69bf%2Fdo%20what%20you%20love.jpg?v=1636241938629" alt="do-what-you-love-light-sign" height=200px>
+        <p class="mentoring-paragraph-4">That is it! I'll get in contact with you shortly. I only do one mentorship ant a time, so if I'm doing one right now I won't be able to begin a new one simultanously. I'll let you know when we start. See you in a bit!</p>
+      </main>
+
+      <footer>
+        <p class="copyright">&copy; 2021 Amon Brollo - 0.25</p>
+        <div class="social">
+          <a class="youtube-icon" href="https://www.youtube.com/channel/UChwriwjPQFNa6opJcigLm7Q" target="_blank"><img src="https://cdn.glitch.me/a6bac801-24eb-4985-a30e-9d35164a69bf%2Fyt%20icon.png?v=1637334897612" alt="YouTube-Icon" height="50"></a>
+          <a class="instagram-icon" href="https://www.instagram.com/amonbrollo/" target="_blank"><img src="https://cdn.glitch.me/a6bac801-24eb-4985-a30e-9d35164a69bf%2Fig-icon.png?v=1637335112634" alt="Instagram-Icon" height="35"></a>
+          <a class="facebook-icon" href="https://www.facebook.com/amon.brollo" target="_blank"><img src="https://cdn.glitch.me/a6bac801-24eb-4985-a30e-9d35164a69bf%2Ffb-icon.png?v=1637335112634" alt="Facebook-Icon" height="40"></a>
+      </footer>
+      
+    </div>
+  </body>
+  
+</html>
